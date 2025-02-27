@@ -1,0 +1,61 @@
+<div *ngIf="!isUserLoggedIn && !isAdminLoggedIn">
+  <nz-header>
+    <div class="main-header">
+      <div class="header-left">
+        <a class="logo" routerLink="/login">Quiz App</a>
+      </div>
+  
+      <div class="nav-links">
+        <a nz-button nzType="link" routerLink="/register" routerLinkActive="active">Sign Up</a>
+        <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Login</a>
+      </div>
+    </div>
+  </nz-header>
+</div>
+
+<div *ngIf="isAdminLoggedIn">
+  <nz-header>
+    <div class="main-header">
+      <div class="header-left">
+        <a class="logo" routerLink="/admin/dashboard">Quiz App</a>
+      </div>
+      <div class="nav-links">
+        <a nz-button nzType="link" routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</a>
+        <a nz-button nzType="link" routerLink="/admin/create-test" routerLinkActive="active">Create Test</a>
+        <a nz-button nzType="link" routerLink="/admin/view-test-results" routerLinkActive="active">View Result</a>
+        <a nz-button nzType="link" (click)="logout()">LogOut</a>
+      </div>
+    </div>
+  </nz-header>
+</div>
+
+
+
+
+
+<div *ngIf="isUserLoggedIn">
+  <nz-header>
+    <div class="main-header">
+      <div class="header-left">
+        <a class="logo" routerLink="/user/dashboard">Quiz App</a>
+      </div>
+      <div class="nav-links">
+        <a nz-button nzType="link" routerLink="/user/dashboard" routerLinkActive="active">Dashboard</a>
+        <a nz-button nzType="link" routerLink="/user/view-test-results" routerLinkActive="active">View Result</a>
+        <a nz-button nzType="link" (click)="logout()">LogOut</a>
+      </div>
+    </div>
+  </nz-header>
+</div>
+
+
+
+
+
+
+
+
+
+<nz-content>
+  <router-outlet></router-outlet>  <!-- Ensure this is present -->
+</nz-content>

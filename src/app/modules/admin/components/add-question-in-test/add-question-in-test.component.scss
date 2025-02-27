@@ -1,0 +1,120 @@
+/* Background Styling */
+.bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F8F8F8;
+    padding: 20px;
+  }
+  
+  /* Form Container */
+  .parent {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .parent:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Title Styling */
+  .imgDiv h1 {
+    color: #6a0dad;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form Wrapper */
+  .child {
+    width: 100%;
+  }
+  
+  /* Form Items */
+  nz-form-item {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  
+  /* Labels */
+  nz-form-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Input Fields */
+  nz-form-control input {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Input Focus Effect */
+  nz-form-control input:focus {
+    border-color: #6a0dad !important;
+    box-shadow: 0 0 5px rgba(106, 13, 173, 0.5);
+    outline: none;
+  }
+  
+  /* Error Message Styling */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none; /* Initially hidden */
+  }
+  
+  /* Show error when input is invalid */
+  nz-form-control.ng-touched.ng-invalid .error-message {
+    display: block;
+  }
+  
+  /* Submit Button */
+  .login-form-button {
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #6a0dad, #ff007f);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Button Hover Effect */
+  .login-form-button:hover {
+    background: linear-gradient(135deg, #5c0bad, #e6006e);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .parent {
+      max-width: 90%;
+      padding: 20px;
+    }
+  
+    .imgDiv h1 {
+      font-size: 24px;
+    }
+  }
+  
