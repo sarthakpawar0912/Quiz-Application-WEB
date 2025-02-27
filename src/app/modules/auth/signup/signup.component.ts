@@ -21,8 +21,11 @@ import { NzInputModule } from 'ng-zorro-antd/input';
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })
+
 export class SignupComponent implements OnInit {
+  
   validateForm!: FormGroup;
+
 
   constructor(
     private fb: FormBuilder,
@@ -30,6 +33,7 @@ export class SignupComponent implements OnInit {
     private router: Router,
     private authService: AuthService
   ) {}
+
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
@@ -39,15 +43,20 @@ export class SignupComponent implements OnInit {
     });
   }
 
+
   submitForm(): void {
     this.authService.register(this.validateForm.value).subscribe(
       (res) => {
         this.message.success(`Signup Successful`, { nzDuration: 5000 });
         this.router.navigateByUrl('/login');
+     
       },
       (error) => {
         this.message.error(`${error.error}`, { nzDuration: 5000 });
       }
+
     );
+
   }
+  
 }

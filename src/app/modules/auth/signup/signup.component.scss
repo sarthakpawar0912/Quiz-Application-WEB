@@ -25,6 +25,7 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   }
   
+  
   /* Form Wrapper */
   .child {
     width: 100%;
@@ -38,12 +39,14 @@
     margin-bottom: 20px;
     text-align: center;
   }
+
   
   /* Form Items */
   .nz-form-item {
     margin-bottom: 16px;
   }
   
+
   /* Input Fields */
   input[nz-input] {
     width: 100%;
@@ -54,6 +57,7 @@
     border: 1px solid #ccc;
     transition: border 0.3s ease, box-shadow 0.3s ease;
   }
+
   
   /* Input Focus Effect */
   input[nz-input]:focus {
@@ -61,6 +65,7 @@
     box-shadow: 0 0 5px rgba(106, 13, 173, 0.5);
   }
   
+
   /* Register Button */
   .login-form-button {
     width: 100%;
@@ -74,12 +79,14 @@
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
   }
+
   
   /* Button Hover Effect */
   .login-form-button:hover {
     background: linear-gradient(135deg, #5c0bad, #e6006e);
     transform: translateY(-2px);
   }
+
   
   /* Login Link */
   a {
@@ -88,6 +95,7 @@
     text-decoration: none;
     transition: color 0.3s ease;
   }
+
   
   /* Login Link Hover */
   a:hover {
@@ -95,6 +103,7 @@
     text-decoration: underline;
   }
   
+
   /* Responsive Design */
   @media (max-width: 480px) {
     .parent {
@@ -102,6 +111,7 @@
       padding: 20px;
     }
   
+
     .imgDiv h1 {
       font-size: 24px;
     }

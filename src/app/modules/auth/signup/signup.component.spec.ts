@@ -12,12 +12,15 @@ describe('SignupComponent', () => {
     })
     .compileComponents();
 
+
     fixture = TestBed.createComponent(SignupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });
