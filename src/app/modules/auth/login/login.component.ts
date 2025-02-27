@@ -9,6 +9,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 import { AuthService } from '../services/auth.service';
 import { UserStorageService } from '../services/user-storage.service';
 
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -20,12 +21,14 @@ import { UserStorageService } from '../services/user-storage.service';
     NzButtonModule,
     RouterModule
   ],
+
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   validateForm!: FormGroup;
   
+
   constructor(
     private fb: FormBuilder,
     private message: NzMessageService,
@@ -33,6 +36,7 @@ export class LoginComponent {
     private authService: AuthService,
     private userStorageService: UserStorageService
   ) {}
+  
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
@@ -40,6 +44,7 @@ export class LoginComponent {
       password: [null, [Validators.required]]
     });
   }
+
 
   submitForm() {
     if (this.validateForm.invalid) return;
@@ -58,9 +63,11 @@ export class LoginComponent {
           this.router.navigate(['/login']);
         }
       },
+
       () => {
         this.message.error(`Bad Credentials`, { nzDuration: 5000 });
       }
     );
   }
+  
 }

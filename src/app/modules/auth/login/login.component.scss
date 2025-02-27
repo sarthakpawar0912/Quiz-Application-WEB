@@ -30,6 +30,7 @@
     width: 100%;
   }
   
+  
   /* Login Title */
   .imgDiv h1 {
     color: #6a0dad;
@@ -43,6 +44,7 @@
   .nz-form-item {
     margin-bottom: 16px;
   }
+
   
   /* Input Fields */
   input[nz-input] {
@@ -54,6 +56,7 @@
     border: 1px solid #ccc;
     transition: border 0.3s ease, box-shadow 0.3s ease;
   }
+
   
   /* Input Focus Effect */
   input[nz-input]:focus {
@@ -61,7 +64,8 @@
     box-shadow: 0 0 5px rgba(106, 13, 173, 0.5);
   }
   
-  /* Login Button */
+  /* Login B
+  utton */
   .login-form-button {
     width: 100%;
     height: 45px;
@@ -74,6 +78,7 @@
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
   }
+
   
   /* Button Hover Effect */
   .login-form-button:hover {
@@ -81,6 +86,7 @@
     transform: translateY(-2px);
   }
   
+
   /* Register Link */
   a {
     color: #6a0dad;
@@ -90,12 +96,14 @@
     margin-left: 5px;
   }
   
+
   /* Register Link Hover */
   a:hover {
     color: #ff007f;
     text-decoration: underline;
   }
   
+
   /* Responsive Design */
   @media (max-width: 480px) {
     .parent {
