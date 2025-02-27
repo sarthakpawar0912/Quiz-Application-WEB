@@ -19,6 +19,7 @@ export class DashboardComponent {
     this.getAllTests();
   }
 
+  
   getAllTests() {
     this.testService.getAlltest().subscribe(
       res => {
@@ -35,6 +36,7 @@ export class DashboardComponent {
       }
     );
   }
+
 
   getFormattedTime(time: number): string {
     const minutes = Math.floor(time / 60);

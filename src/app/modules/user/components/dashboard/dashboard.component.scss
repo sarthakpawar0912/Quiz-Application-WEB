@@ -25,12 +25,15 @@
     justify-content: center;
   }
   
+  
   /* Test Card Styling */
   .test-card {
     width: 100%;
     max-width: 350px;
   }
   
+
+
   .test-card-content {
     padding: 20px;
     background: white;
@@ -42,6 +45,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
   
   .test-card-content:hover {
     transform: scale(1.02);
@@ -53,6 +57,7 @@
     margin: 5px 0;
     flex-grow: 1; /* Allows description to take up space while keeping cards uniform */
   }
+
   
   /* Buttons */
   .button-group {
@@ -60,6 +65,8 @@
     justify-content: space-between;
     margin-top: auto; /* Ensures buttons stay at the bottom */
   }
+
+
   
   .edit-button {
     background-color: #ff9800;
@@ -67,10 +74,13 @@
     border: none;
   }
   
+
   .edit-button:hover {
     background-color: #e68900;
   }
   
+
+
   /* Responsive Design */
   @media (max-width: 768px) {
     .test-cards {
