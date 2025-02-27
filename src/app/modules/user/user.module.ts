@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { UserRoutingModule } from './user-routing.module';
+
 
 
 @NgModule({
@@ -11,4 +11,5 @@ import { UserRoutingModule } from './user-routing.module';
     UserRoutingModule
   ]
 })
+
 export class UserModule { }
