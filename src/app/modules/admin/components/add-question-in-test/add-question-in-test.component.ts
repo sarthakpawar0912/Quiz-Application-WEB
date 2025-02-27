@@ -8,15 +8,19 @@ import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { AdminService } from '../../services/admin.service';
 
 @Component({
+
   selector: 'app-add-question-in-test',
   imports: [SharedModule,DemoNgZorroAntdModule,CommonModule],
   templateUrl: './add-question-in-test.component.html',
   styleUrl: './add-question-in-test.component.scss'
 })
-export class AddQuestionInTestComponent {
-  testForm: any;
-  deviceService: any;
 
+export class AddQuestionInTestComponent {
+ 
+ 
+  testForm: any;
+ 
+  deviceService: any;
 
   constructor(
     private fb: FormBuilder,
@@ -25,11 +29,9 @@ export class AddQuestionInTestComponent {
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {}
-
   
   questionForm!: FormGroup;
   id: number | null = null;
-
 
   ngOnInit() {
     this.questionForm = this.fb.group({
@@ -40,10 +42,8 @@ export class AddQuestionInTestComponent {
       optionD: [null, [Validators.required]],
       correctOption: [null, [Validators.required]]
     });
-
-    this.id = this.activatedRoute.snapshot.params['id'];
+  this.id = this.activatedRoute.snapshot.params['id'];
   }
-
 
   submitForm() {
     if (this.questionForm.invalid) {
@@ -54,7 +54,6 @@ export class AddQuestionInTestComponent {
       );
       return;
     }
-  
     const questionDto = this.questionForm.value;
     questionDto.id = this.id; // Assigning the test ID
   
@@ -78,4 +77,5 @@ export class AddQuestionInTestComponent {
       }
     );
   }
+  
 }
