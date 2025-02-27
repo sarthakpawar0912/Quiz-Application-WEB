@@ -14,6 +14,8 @@ import { AdminService } from '../../services/admin.service';
   templateUrl: './view-test.component.html',
   styleUrl: './view-test.component.scss'
 })
+
+
 export class ViewTestComponent {
 
   questions: any[] = [];
@@ -22,6 +24,8 @@ export class ViewTestComponent {
   testDescription: string = '';
   testTime: number = 0;
 
+
+
   constructor(
     private fb: FormBuilder,
     private adminService: AdminService,
@@ -29,6 +33,9 @@ export class ViewTestComponent {
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {}
+
+
+
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
@@ -42,6 +49,9 @@ export class ViewTestComponent {
       }
     });
   }
+
+
+
 
   fetchTestDetails() {
     this.adminService.getTestById(this.testId).subscribe(

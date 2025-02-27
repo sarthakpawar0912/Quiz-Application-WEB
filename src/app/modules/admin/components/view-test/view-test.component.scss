@@ -8,6 +8,8 @@ div[style] {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
+
+  
   
   /* Style each question block */
   .question {
@@ -17,6 +19,9 @@ div[style] {
     border-radius: 8px;
     background: #f9f9f9;
   }
+
+
+
   
   /* Style the question text */
   .question h3 {
@@ -26,6 +31,9 @@ div[style] {
     margin-bottom: 10px;
   }
   
+
+
+
   /* Style radio button labels */
   .question label {
     display: flex;
@@ -47,6 +55,8 @@ div[style] {
   .question label:hover {
     background: #e6e6e6;
   }
+
+
   
   /* Selected radio button effect */
   .question input[type="radio"]:checked + label {
@@ -54,6 +64,7 @@ div[style] {
     color: #fff;
   }
   
+
   /* Responsive Design */
   @media (max-width: 768px) {
     div[style] {
