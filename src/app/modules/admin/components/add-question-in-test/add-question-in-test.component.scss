@@ -81,11 +81,13 @@
     display: none; /* Initially hidden */
   }
   
+  
   /* Show error when input is invalid */
   nz-form-control.ng-touched.ng-invalid .error-message {
     display: block;
   }
   
+
   /* Submit Button */
   .login-form-button {
     width: 100%;
