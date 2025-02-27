@@ -54,6 +54,7 @@
   flex-grow: 1; /* Allows description to take up space while keeping cards uniform */
 }
 
+
 /* Buttons */
 .button-group {
   display: flex;
@@ -61,11 +62,13 @@
   margin-top: auto; /* Ensures buttons stay at the bottom */
 }
 
+
 .edit-button {
   background-color: #ff9800;
   color: white;
   border: none;
 }
+
 
 .edit-button:hover {
   background-color: #e68900;
@@ -77,6 +80,7 @@
       flex-direction: column;
       align-items: center;
   }
+
 
   .test-card {
       max-width: 90%;
