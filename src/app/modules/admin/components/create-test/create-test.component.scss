@@ -67,6 +67,7 @@
     margin-top: 20px;
   }
   
+  
   .login-form-button {
     width: 100%;
     height: 45px;
@@ -80,11 +81,14 @@
     transition: background 0.3s ease, transform 0.2s ease;
   }
   
+
+
   /* Button Hover Effect */
   .login-form-button:hover {
     background: linear-gradient(135deg, #5c0bad, #e6006e);
     transform: translateY(-2px);
   }
+
   
   /* Responsive Design */
   @media (max-width: 480px) {
@@ -92,6 +96,7 @@
       max-width: 90%;
       padding: 20px;
     }
+
   
     nz-form-label {
       font-size: 14px;

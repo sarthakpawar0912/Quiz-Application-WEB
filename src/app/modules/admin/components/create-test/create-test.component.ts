@@ -11,9 +11,12 @@ import { AdminService } from '../../services/admin.service';
   templateUrl: './create-test.component.html',
   styleUrl: './create-test.component.scss'
 })
+
 export class CreateTestComponent {
 
+
   testForm!: FormGroup;
+
 
   constructor(
     private fb: FormBuilder,
@@ -22,6 +25,8 @@ export class CreateTestComponent {
     private router: Router
   ) {}
 
+
+
   ngOnInit() {
     this.testForm = this.fb.group({
       title: [null, Validators.required],
@@ -29,6 +34,8 @@ export class CreateTestComponent {
       time: [null, Validators.required]
     });
   }
+
+
 
   
   submitForm() {
@@ -41,6 +48,8 @@ export class CreateTestComponent {
       return;
     }
   
+
+    
     console.log('Form Data:', this.testForm.value); // Log the form data
   
     this.devicesService.createTest(this.testForm.value).subscribe(
