@@ -13,10 +13,10 @@ import { DemoNgZorroAntdModule } from '../../DemoNgZorroAntdModule';
 import { NzCardComponent, NzCardGridDirective, NzCardModule } from 'ng-zorro-antd/card';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 
-
-
 @NgModule({
+
   declarations: [],
+
   imports: [
     CommonModule,
     NzLayoutModule,
@@ -37,6 +37,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
     NzGridModule,
     CommonModule
   ],
+
   exports:[
     NzLayoutModule,
     NzMenuModule,
@@ -53,6 +54,9 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
     NzButtonModule,
     NzGridModule,  
     NzInputModule,
+
   ],
+
 })
+
 export class SharedModule { }
