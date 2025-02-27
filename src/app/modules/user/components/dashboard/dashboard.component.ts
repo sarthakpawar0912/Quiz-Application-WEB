@@ -3,6 +3,7 @@ import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { TestService } from '../../services/test.service';
 import { SharedModule } from '../../../shared/shared.module';
 
+
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -11,15 +12,16 @@ import { SharedModule } from '../../../shared/shared.module';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
+  
   tests: any[] = [];
 
   constructor(private notification: NzNotificationService, private testService: TestService) {}
+
 
   ngOnInit() {
     this.getAllTests();
   }
 
-  
   getAllTests() {
     this.testService.getAlltest().subscribe(
       res => {
@@ -38,9 +40,11 @@ export class DashboardComponent {
   }
 
 
+
   getFormattedTime(time: number): string {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
     return `${minutes} minutes ${seconds} seconds`;
   }
+  
 }
