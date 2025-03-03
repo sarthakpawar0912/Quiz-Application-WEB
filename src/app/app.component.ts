@@ -25,12 +25,9 @@ import { UserStorageService } from './modules/auth/services/user-storage.service
 })
 
 export class AppComponent {
-
   isCollapsed = false;
-  
   isUserLoggedIn = false;
   isAdminLoggedIn = false;
-
 
   constructor(
     private router: Router,
