@@ -9,7 +9,6 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 import { AuthService } from '../services/auth.service';
 import { UserStorageService } from '../services/user-storage.service';
 
-
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -21,14 +20,12 @@ import { UserStorageService } from '../services/user-storage.service';
     NzButtonModule,
     RouterModule
   ],
-
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   validateForm!: FormGroup;
   
-
   constructor(
     private fb: FormBuilder,
     private message: NzMessageService,
@@ -37,7 +34,6 @@ export class LoginComponent {
     private userStorageService: UserStorageService
   ) {}
   
-
   ngOnInit(): void {
     this.validateForm = this.fb.group({
       email: [null, [Validators.required, Validators.email]],
@@ -45,18 +41,15 @@ export class LoginComponent {
     });
   }
 
-
   submitForm() {
     if (this.validateForm.invalid) return;
   
     this.authService.login(this.validateForm.value).subscribe(
       (res) => {
         this.message.success(`Login Successful`, { nzDuration: 5000 });
-        
         // Save user data
         const user = { id: res.id, role: res.role };
-        this.userStorageService.saveUser(user);
-  
+        this.userStorageService.saveUser(user);  
         // Update login status
         setTimeout(() => {
           window.location.reload(); // Ensures UI updates
@@ -76,6 +69,5 @@ export class LoginComponent {
       }
     );
   }
-  
   
 }
