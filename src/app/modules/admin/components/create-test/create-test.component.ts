@@ -13,10 +13,7 @@ import { AdminService } from '../../services/admin.service';
 })
 
 export class CreateTestComponent {
-
-
   testForm!: FormGroup;
-
 
   constructor(
     private fb: FormBuilder,
@@ -24,8 +21,6 @@ export class CreateTestComponent {
     private notification: NzNotificationService,
     private router: Router
   ) {}
-
-
 
   ngOnInit() {
     this.testForm = this.fb.group({
@@ -35,9 +30,6 @@ export class CreateTestComponent {
     });
   }
 
-
-
-  
   submitForm() {
     if (this.testForm.invalid) {
       this.notification.error(
@@ -47,11 +39,7 @@ export class CreateTestComponent {
       );
       return;
     }
-  
-
-    
     console.log('Form Data:', this.testForm.value); // Log the form data
-  
     this.devicesService.createTest(this.testForm.value).subscribe(
       (res) => {
         this.notification.success(
@@ -70,4 +58,5 @@ export class CreateTestComponent {
       }
     );
   }
+  
 }
