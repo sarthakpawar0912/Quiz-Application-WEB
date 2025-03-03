@@ -11,17 +11,12 @@ import { NzTableModule } from 'ng-zorro-antd/table';
   styleUrl: './view-test-results.component.scss'
 })
 export class ViewTestResultsComponent {
-
   resultsData:any;
-
   constructor(private testService:AdminService){}
 
   ngOnInit(){
     this.getTestResults();
   }
-
-
-
 
   getTestResults(){
     this.testService.getTestResults().subscribe(res=>{
@@ -29,19 +24,5 @@ export class ViewTestResultsComponent {
       console.log(this.resultsData);
     })
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
