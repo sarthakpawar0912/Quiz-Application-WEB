@@ -2,10 +2,8 @@
   <div class="timer-container">
       <strong>Time Left: </strong> <span class="timer">{{ getFormattedTime() }}</span>
   </div>
-
   <h2>{{ testTitle }}</h2>
   <p>{{ testDescription }}</p>
-
   <div *ngIf="questions && questions.length > 0; else noQuestions">
       <form (ngSubmit)="submitAnswer()">
           <div class="question" *ngFor="let question of questions">

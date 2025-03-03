@@ -13,7 +13,8 @@ import { UserStorageService } from '../../../auth/services/user-storage.service'
   styleUrl: './take-test.component.scss'
 })
 export class TakeTestComponent{
-  questions: any[] = [];
+  
+    questions: any[] = [];
     testId: number = 0;
     testTitle: string = '';
     testDescription: string = '';
@@ -54,7 +55,6 @@ export class TakeTestComponent{
 
                     this.testTime = res.testDto.time ?? 0;
                     this.timeRemaining = this.testTime;
-
                     console.log(`⏳ Timer set for ${this.timeRemaining} seconds`);
 
                     this.startTimer();
@@ -80,7 +80,6 @@ export class TakeTestComponent{
         if (this.interval) {
             clearInterval(this.interval);
         }
-
         this.interval = setInterval(() => {
             if (this.timeRemaining > 0) {
                 this.timeRemaining--;
@@ -101,13 +100,13 @@ export class TakeTestComponent{
     onAnswerChange(questionId: number, selectedOption: string) {
       this.selectedAnswers[questionId] = selectedOption; // Store as "optionA", "optionB", etc.
       console.log('Selected Answers:', this.selectedAnswers);
-  }
+    }
 
     submitAnswer() {
       if (this.isSubmitting) {
           return; // Prevent multiple submissions
       }
-  
+
       this.isSubmitting = true;
   
       // Prepare the answer list
