@@ -16,10 +16,7 @@ import { AdminService } from '../../services/admin.service';
 })
 
 export class AddQuestionInTestComponent {
- 
- 
   testForm: any;
- 
   deviceService: any;
 
   constructor(
@@ -56,9 +53,7 @@ export class AddQuestionInTestComponent {
     }
     const questionDto = this.questionForm.value;
     questionDto.id = this.id; // Assigning the test ID
-  
     console.log('Form Data:', questionDto); // Log the form data
-  
     this.devicesService.addQuestionInTest(questionDto).subscribe(
       (res) => {
         this.notification.success(
