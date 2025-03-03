@@ -11,16 +11,11 @@ import { ViewTestResultsComponent } from './components/view-test-results/view-te
 
 const routes: Routes = [
  
-  {path:'dashboard',component:DashboardComponent},
-  
-  {path:'create-test',component:CreateTestComponent},
-  
+  {path:'dashboard',component:DashboardComponent}, 
+  {path:'create-test',component:CreateTestComponent}, 
   {path:'add-question/:id',component:AddQuestionInTestComponent},
-  
   {path:'view-test/:id',component:ViewTestComponent},
-
   {path:'view-test-results',component:ViewTestResultsComponent},
-
 ];
 
 @NgModule({
