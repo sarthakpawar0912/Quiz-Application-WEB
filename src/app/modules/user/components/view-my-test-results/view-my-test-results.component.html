@@ -8,6 +8,7 @@
         [nzShowPagination]="true"
         [nzShowSizeChanger]="false">
       <thead>
+        
         <tr>
           <th nzWidth="25%">Test Name</th>
           <th nzWidth="25%">Total Questions</th>
@@ -15,6 +16,7 @@
           <th nzWidth="25%">Percentage</th>
         </tr>
       </thead>
+
       <tbody>
         <tr *ngFor="let data of basicTable.data">  <!-- FIX: Use basicTable.data -->
           <td>{{ data.testName }}</td>
