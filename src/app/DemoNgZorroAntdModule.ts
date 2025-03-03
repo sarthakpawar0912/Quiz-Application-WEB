@@ -154,12 +154,12 @@ import { HttpClientModule } from '@angular/common/http';
    NzResizableModule,
    NzSegmentedModule,
    NzModalModule, NzCardComponent,
-       NzCardModule,
-       NzCardGridDirective,
-       NzCardModule,
-    NzButtonModule,
-    NzGridModule,
-    CommonModule
+   NzCardModule,
+   NzCardGridDirective,
+   NzCardModule,
+   NzButtonModule,
+   NzGridModule,
+   CommonModule
   ]
 })
 export class AppModule { }
