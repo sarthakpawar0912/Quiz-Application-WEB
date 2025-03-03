@@ -24,8 +24,6 @@ export class ViewTestComponent {
   testDescription: string = '';
   testTime: number = 0;
 
-
-
   constructor(
     private fb: FormBuilder,
     private adminService: AdminService,
@@ -33,9 +31,6 @@ export class ViewTestComponent {
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {}
-
-
-
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
@@ -50,20 +45,15 @@ export class ViewTestComponent {
     });
   }
 
-
-
-
   fetchTestDetails() {
     this.adminService.getTestById(this.testId).subscribe(
       res => {
         console.log("🔍 API Response:", res);
-
         if (res && res.testDto) {
           this.testTitle = res.testDto.title;
           this.testDescription = res.testDto.description;
           this.testTime = res.testDto.time;
         }
-
         if (res && res.questionDto && Array.isArray(res.questionDto)) {
           this.questions = res.questionDto;
           console.log("✅ Loaded Questions:", this.questions);
@@ -79,4 +69,5 @@ export class ViewTestComponent {
       }
     );
   }
+  
 }
