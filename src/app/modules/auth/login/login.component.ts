@@ -48,13 +48,21 @@ export class LoginComponent {
 
   submitForm() {
     if (this.validateForm.invalid) return;
-    
+  
     this.authService.login(this.validateForm.value).subscribe(
       (res) => {
         this.message.success(`Login Successful`, { nzDuration: 5000 });
+        
+        // Save user data
         const user = { id: res.id, role: res.role };
         this.userStorageService.saveUser(user);
-        
+  
+        // Update login status
+        setTimeout(() => {
+          window.location.reload(); // Ensures UI updates
+        }, 100); 
+  
+        // Navigate based on role
         if (this.userStorageService.isAdminLoggedIn()) {
           this.router.navigate(['/admin/dashboard']);
         } else if (this.userStorageService.isUserLoggedIn()) {
@@ -63,11 +71,11 @@ export class LoginComponent {
           this.router.navigate(['/login']);
         }
       },
-
       () => {
         this.message.error(`Bad Credentials`, { nzDuration: 5000 });
       }
     );
   }
+  
   
 }

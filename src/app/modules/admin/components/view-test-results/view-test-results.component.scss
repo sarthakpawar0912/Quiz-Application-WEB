@@ -1,0 +1,62 @@
+/* Dashboard Container */
+.dashboard-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #6a0dad;
+}
+
+/* Table Container */
+.table-container {
+    max-width: 90%;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+/* Table Styling */
+nz-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table Headers */
+nz-table th {
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table Rows */
+nz-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternating Row Colors */
+nz-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+}

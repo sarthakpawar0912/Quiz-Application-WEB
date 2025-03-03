@@ -1,0 +1,46 @@
+/* Container for test results */
+.test-results-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+  }
+  
+  /* Table Styling */
+  nz-table {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Header */
+  nz-table thead th {
+    background-color: #6a0dad;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Table Rows */
+  nz-table tbody td {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Hover Effect */
+  nz-table tbody tr:hover {
+    background-color: #f1e5ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nz-table {
+      font-size: 14px;
+    }
+  }
+  

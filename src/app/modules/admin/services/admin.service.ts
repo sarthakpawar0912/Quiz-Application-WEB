@@ -35,6 +35,10 @@ export class AdminService {
   }
   
 
+  getTestResults(): Observable<any> {
+    return this.http.get(`${BASIC_URL}/api/test/test-result`);
+  }
+
   addQuestionInTest(questionDto: any ):Observable<any>{
     return this.http.post(BASIC_URL+`/api/test/question`,questionDto);
   }

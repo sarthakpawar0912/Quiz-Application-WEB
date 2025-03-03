@@ -1,13 +1,15 @@
+
 import { Component } from '@angular/core';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { TestService } from '../../services/test.service';
 import { SharedModule } from '../../../shared/shared.module';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [SharedModule],
+  imports: [SharedModule,CommonModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -46,5 +48,5 @@ export class DashboardComponent {
     const seconds = time % 60;
     return `${minutes} minutes ${seconds} seconds`;
   }
-  
+
 }

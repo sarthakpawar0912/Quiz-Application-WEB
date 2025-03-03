@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Component, NgZone } from '@angular/core';
+import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
@@ -27,18 +27,26 @@ export class AppComponent {
   isUserLoggedIn = false;
   isAdminLoggedIn = false;
 
-  constructor(private router: Router, private userStorageService: UserStorageService) {}
+  constructor(
+    private router: Router,
+    private userStorageService: UserStorageService,
+    private ngZone: NgZone
+  ) {}
 
   ngOnInit() {
     this.updateLoginStatus();
-    this.router.events.subscribe(() => {
-      this.updateLoginStatus();
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.ngZone.run(() => this.updateLoginStatus());
+      }
     });
   }
 
   updateLoginStatus() {
     this.isUserLoggedIn = this.userStorageService.isUserLoggedIn();
     this.isAdminLoggedIn = this.userStorageService.isAdminLoggedIn();
+    console.log("User logged in:", this.isUserLoggedIn);
+    console.log("Admin logged in:", this.isAdminLoggedIn);
   }
 
   logout() {

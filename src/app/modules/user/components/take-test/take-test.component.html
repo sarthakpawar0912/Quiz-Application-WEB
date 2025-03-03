@@ -1,0 +1,44 @@
+<div class="test-container">
+  <div class="timer-container">
+      <strong>Time Left: </strong> <span class="timer">{{ getFormattedTime() }}</span>
+  </div>
+
+  <h2>{{ testTitle }}</h2>
+  <p>{{ testDescription }}</p>
+
+  <div *ngIf="questions && questions.length > 0; else noQuestions">
+      <form (ngSubmit)="submitAnswer()">
+          <div class="question" *ngFor="let question of questions">
+              <h3>{{ question.questionText }}</h3>
+
+              <label *ngFor="let option of ['optionA', 'optionB', 'optionC', 'optionD']">
+                  <input
+                      type="radio"
+                      name="question{{ question.id }}"
+                      [value]="option"
+                      (change)="onAnswerChange(question.id, option)"
+                  />
+                  {{ question[option] }}
+              </label>
+          </div>
+
+          <div style="margin-top: 20px; margin-bottom: 20px; float: right;">
+              <button
+                  style="margin-bottom: 20px;"
+                  nz-button
+                  nzType="primary"
+                  type="submit"
+                  [disabled]="isSubmitting"
+              >
+                  {{ isSubmitting ? 'Submitting...' : 'Submit Answer' }}
+              </button>
+          </div>
+      </form>
+  </div>
+
+  <ng-template #noQuestions>
+      <p style="text-align: center; font-size: 1.2em; color: red;">
+          No questions available for this test.
+      </p>
+  </ng-template>
+</div>

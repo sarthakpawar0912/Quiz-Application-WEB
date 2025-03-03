@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
+import { DemoNgZorroAntdModule } from '../../DemoNgZorroAntdModule';
 
 
 
@@ -8,7 +9,8 @@ import { UserRoutingModule } from './user-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    DemoNgZorroAntdModule
   ]
 })
 
