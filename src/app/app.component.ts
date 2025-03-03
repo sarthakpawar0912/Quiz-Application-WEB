@@ -7,6 +7,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { SharedModule } from './modules/shared/shared.module';
 import { UserStorageService } from './modules/auth/services/user-storage.service';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -22,16 +23,20 @@ import { UserStorageService } from './modules/auth/services/user-storage.service
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
+
   isCollapsed = false;
   isUserLoggedIn = false;
   isAdminLoggedIn = false;
+
 
   constructor(
     private router: Router,
     private userStorageService: UserStorageService,
     private ngZone: NgZone
   ) {}
+
 
   ngOnInit() {
     this.updateLoginStatus();
@@ -42,6 +47,7 @@ export class AppComponent {
     });
   }
 
+
   updateLoginStatus() {
     this.isUserLoggedIn = this.userStorageService.isUserLoggedIn();
     this.isAdminLoggedIn = this.userStorageService.isAdminLoggedIn();
@@ -49,8 +55,10 @@ export class AppComponent {
     console.log("Admin logged in:", this.isAdminLoggedIn);
   }
 
+
   logout() {
     this.userStorageService.signOut();
     this.router.navigate(['/login']);
   }
+  
 }
