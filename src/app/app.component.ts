@@ -27,6 +27,7 @@ import { UserStorageService } from './modules/auth/services/user-storage.service
 export class AppComponent {
 
   isCollapsed = false;
+  
   isUserLoggedIn = false;
   isAdminLoggedIn = false;
 
@@ -60,5 +61,6 @@ export class AppComponent {
     this.userStorageService.signOut();
     this.router.navigate(['/login']);
   }
-  
+
+
 }
