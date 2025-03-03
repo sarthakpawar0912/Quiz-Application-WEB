@@ -5,7 +5,6 @@ import { AdminService } from '../../services/admin.service';
 import { DemoNgZorroAntdModule } from '../../../../DemoNgZorroAntdModule';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
   selector: 'app-dashboard',
   imports: [SharedModule,DemoNgZorroAntdModule,CommonModule],
@@ -15,22 +14,16 @@ import { CommonModule } from '@angular/common';
 
 export class DashboardComponent {
 
-    // ✅ Define an interface for the test object
-   
-   
-    tests: { id: number; title: string; time: number; description: string }[] = [];
-
+  tests: { id: number; title: string; time: number; description: string }[] = [];
 
   constructor(
     private notification: NzNotificationService,
     private testService: AdminService
   ) {}
 
-
   ngOnInit() {
     this.getAllTests();
   }
-
 
   getAllTests() {
     this.testService.getAllTest().subscribe(
@@ -44,8 +37,6 @@ export class DashboardComponent {
       }
     );
   }
-
-  
 
   getFormattedTime(time: number): string {
     const minutes = Math.floor(time / 60);
