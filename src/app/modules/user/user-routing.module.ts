@@ -9,9 +9,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'take-test/:id', component: TakeTestComponent },
   { path: 'view-my-test-results', component: ViewMyTestResultsComponent }
-
 ];
-
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
