@@ -5,13 +5,12 @@ import { UserStorageService } from '../../auth/services/user-storage.service';
 
 const BASIC_URL = "http://localhost:8080";
 
-
 @Injectable({
   providedIn: 'root'
 })
 
 export class TestService {
- 
+
   constructor(private http: HttpClient,
     private userStorageService: UserStorageService) {}
 
