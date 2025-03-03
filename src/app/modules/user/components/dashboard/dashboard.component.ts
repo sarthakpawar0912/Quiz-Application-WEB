@@ -5,7 +5,6 @@ import { TestService } from '../../services/test.service';
 import { SharedModule } from '../../../shared/shared.module';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -14,11 +13,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-  
   tests: any[] = [];
-
   constructor(private notification: NzNotificationService, private testService: TestService) {}
-
 
   ngOnInit() {
     this.getAllTests();
@@ -40,8 +36,6 @@ export class DashboardComponent {
       }
     );
   }
-
-
 
   getFormattedTime(time: number): string {
     const minutes = Math.floor(time / 60);
