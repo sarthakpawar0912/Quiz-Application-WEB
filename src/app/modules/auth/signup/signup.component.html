@@ -4,7 +4,6 @@
         <div nz-row class="imgDiv">
           <h1 style="margin-left: 80px;">Sign Up</h1>
         </div>
-  
 
         <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
           <nz-form-item>
@@ -13,13 +12,11 @@
             </nz-form-control>
           </nz-form-item>
   
-
           <nz-form-item>
             <nz-form-control nzHasFeedback nzErrorTip="Please enter a valid password!">
               <input nz-input placeholder="Password" type="password" formControlName="password" />
             </nz-form-control>
           </nz-form-item>
-  
 
           <nz-form-item>
             <nz-form-control nzHasFeedback nzErrorTip="Please enter your name!">
@@ -27,7 +24,6 @@
             </nz-form-control>
           </nz-form-item>
   
-
           <nz-form-item>
             <nz-form-control>
               <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" [disabled]="validateForm.invalid">
