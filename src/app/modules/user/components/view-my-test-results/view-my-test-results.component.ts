@@ -19,6 +19,7 @@ export class ViewMyTestResultsComponent {
     this.getTestResults();
   }
 
+  
   getTestResults() {
     this.testService.getMyTestResults().subscribe(
       res => {
@@ -32,5 +33,5 @@ export class ViewMyTestResultsComponent {
   }
   
 
-  
+
 }
