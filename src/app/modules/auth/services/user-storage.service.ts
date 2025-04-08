@@ -8,9 +8,10 @@ const USER = 'q_user';
 })
 
 export class UserStorageService {
+  
   constructor() {}
 
-  
+
   saveUser(user: any): void {
     window.localStorage.removeItem(USER);
     window.localStorage.setItem(USER, JSON.stringify(user));
