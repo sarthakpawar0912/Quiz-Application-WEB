@@ -23,7 +23,6 @@ import { UserStorageService } from './modules/auth/services/user-storage.service
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-
 export class AppComponent {
   isCollapsed = false;
   isUserLoggedIn = false;
