@@ -24,11 +24,12 @@ export class UserStorageService {
     return this.getUser()?.id || '';
   }
 
+  
   getUserRole(): string {
     return this.getUser()?.role || '';
   }
 
-  
+
   isAdminLoggedIn(): boolean {
     return this.getUserRole() === 'ADMIN';
   }
