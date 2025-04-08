@@ -15,6 +15,7 @@ export class UserStorageService {
     window.localStorage.setItem(USER, JSON.stringify(user));
   }
 
+  
   getUser(): any {
     const user = localStorage.getItem(USER);
     return user ? JSON.parse(user) : null;
@@ -24,7 +25,7 @@ export class UserStorageService {
     return this.getUser()?.id || '';
   }
 
-  
+
   getUserRole(): string {
     return this.getUser()?.role || '';
   }
