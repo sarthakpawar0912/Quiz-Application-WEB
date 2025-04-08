@@ -109,6 +109,7 @@ export class TakeTestComponent{
 
       this.isSubmitting = true;
   
+     
       // Prepare the answer list
       const answerList = Object.keys(this.selectedAnswers).map((questionId) => {
           const selectedOption = this.selectedAnswers[Number(questionId)];
