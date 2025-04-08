@@ -32,6 +32,8 @@ export class SignupComponent implements OnInit {
     private authService: AuthService
   ) {}
 
+  
+
   ngOnInit(): void {
     this.validateForm = this.fb.group({
       email: [null, [Validators.required, Validators.email]],
@@ -40,7 +42,7 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  
+
 
   submitForm(): void {
     this.authService.register(this.validateForm.value).subscribe(
