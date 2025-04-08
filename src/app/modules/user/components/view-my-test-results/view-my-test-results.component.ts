@@ -13,13 +13,14 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 })
 export class ViewMyTestResultsComponent {
 
+  
   dataSet: any[] = [];
   constructor(private testService: TestService) {}
   ngOnInit() {
     this.getTestResults();
   }
 
-  
+
   getTestResults() {
     this.testService.getMyTestResults().subscribe(
       res => {
