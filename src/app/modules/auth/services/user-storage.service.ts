@@ -35,6 +35,7 @@ export class UserStorageService {
   isUserLoggedIn(): boolean {
     return this.getUserRole() === 'USER';
   }
+  
 
   signOut(): void {
     window.localStorage.removeItem(USER);
