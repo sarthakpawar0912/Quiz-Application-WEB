@@ -7,6 +7,7 @@ const BASIC_URL = 'http://localhost:8080/';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
   constructor(private http: HttpClient) {}
 
