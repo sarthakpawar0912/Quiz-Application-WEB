@@ -40,6 +40,8 @@ export class SignupComponent implements OnInit {
     });
   }
 
+  
+
   submitForm(): void {
     this.authService.register(this.validateForm.value).subscribe(
       (res) => {
